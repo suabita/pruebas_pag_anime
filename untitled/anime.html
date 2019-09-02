@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anime Karma</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+
+        function cambiar() {
+
+            if (document.getElementById("HRA").style.color === "red") {
+                document.getElementById("HRA").style.color = "black";
+                document.getElementById("HRA").style.fontSize = "40px";
+            } else {
+                document.getElementById("HRA").style.color = "red";
+                document.getElementById("HRA").style.fontSize = "150px";
+            }
+        }
+
+    </script>
+    <style>
+        .navbar {
+            position: absolute; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.0);
+            font-size: 14px;
+            color: whitesmoke !important;
+            padding: 20px;
+
+        }
+
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 80%;
+            position: relative;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 4, 0.6);
+            color: white;
+            padding: 360px 200px 360px 200px;
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .aligncar {
+            text-align: left;
+            text-align: justify;
+        }
+
+        .search {
+            padding: 6px;
+            font-size: 14px;
+            border: none;
+            font-color: white !important;
+            width: 500px;
+            height: 46px;
+            background: rgba(90, 90, 90, 0.4);
+            margin-left: 20px;
+
+        }
+
+        hr {
+            height: 1px;
+            border: 0;
+            background-color: lightgray;
+        }
+
+        .nav-item {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .card {
+            border: none !important;
+        }
+
+        .jcard {
+            background-color: lavender !important;
+        }
+
+        #buttonsearch {
+            background: rgba(90, 90, 90, 0.4) !important;
+            border: none !important;
+        }
+
+        .navbar {
+            z-index: 5000;
+        }
+    </style>
+
+</head>
+<body>
+
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal"
+        style="margin: 30px;position: absolute;z-index: 2;right: 0px; background-color: tomato">
+    Login
+</button>
+
+<nav class="navbar navbar-expand-sm">
+
+    <a class="navbar-brand" href="#" style="color: whitesmoke;margin-left: 20px;"><strong>Anime
+        Karma</strong></a>
+
+    <input id="busqueda" class="form-control mr-sm-4 search" type="text"
+           placeholder="Search for movies, tv shows and people...">
+
+    <button id="buttonsearch" type="submit"><i class="fa fa-search" ; style="cursor: pointer;"></i></button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="default.asp" target="_blank" style="color: whitesmoke">Movies</a>
+            </li>
+
+            <li class="nav-item">
+                <a style="color: whitesmoke" href="default.asp" target="_blank">Series</a>
+            </li>
+            <li class="nav-item">
+                <a onclick="cambiar();" style="color: whitesmoke" href="default.asp" target="_blank">People</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: whitesmoke" href="default.asp" target="_blank">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: whitesmoke" href="default.asp" target="_blank">DMCA</a>
+            </li>
+            <li class="nav-item" style="margin-left: 90px">
+                <a style="color: whitesmoke" href="default.asp" target="_blank">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div id="demo" class="carousel slide" data-ride="carousel" style="margin-bottom: 100px;">
+
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        <li data-target="#demo" data-slide-to="4"></li>
+    </ul>
+
+    <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+            <img src="doraemon.jpg" alt="doraemon" width="1100" height="100">
+
+            <div class="carousel-caption">
+                <h1 class="aligncar">Doraemon the Movie: Nobita's Treasure Island</h1>
+                <p class="aligncar" style="font-size: 20px">The story is based on Robert Louis Stevenson's Treasure
+                    Island novel.</p>
+                <h4 class="text-warning aligncar">Animation</h4>
+
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="fate.jpg" alt="fate stay night" width="1100" height="100">
+            <div class="carousel-caption">
+                <h1 class="aligncar">Fate/stay night: Heaven's Feel II. lost butterfly</h1>
+                <p class="aligncar" style="font-size: 20px">Theatrical-release adaptation of the visual novel"Fate/stay
+                    night", following the third and final route. (Part 2 of a trilogy.)</p>
+                <h4 class="text-warning aligncar">Action / Adventure / Animation / Fantasy</h4>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="conan.jpg" alt="Detective Conan" width="1100" height="100">
+            <div class="carousel-caption">
+                <h1 class="aligncar">Detective Conan: The Fist of Blue Sapphire</h1>
+                <p class="aligncar" style="font-size: 20px">23rd Detective Conan Movie.</p>
+                <h4 class="text-warning aligncar">Action / Animation / Comedy / Drama</h4>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="rezero.jpg" alt="Re:zero" width="1100" height="100">
+            <div class="carousel-caption">
+                <h1 class="aligncar">Re: Zero Kara Hajimeru Isekai Seikatsu. Memory Snow</h1>
+                <p class="aligncar" style="font-size: 20px">Subaru and friends finally get a moment of peace, and Subaru
+                    goes on a cetain secret mission that he must not let anyone find out about! However, even though
+                    Subaru is wearing a disguise, Petra and other children of the village immediately figure out who he
+                    is. </p>
+                <h4 class="text-warning aligncar">Adventure / Animation </h4>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="cat.jpg" alt="the cat return" width="1100" height="100">
+            <div class="carousel-caption">
+                <h1 class="aligncar">The Cat Returns</h1>
+                <p class="aligncar">Haru, a schoolgirl bored by her ordinary routine, saves the life of an unusual cat
+                    and suddenly her world is transformed beyond anything she ever imagined. </p>
+                <h4 class="text-warning aligncar">Adventure / Animation / Drama / Family</h4>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<div class="container" style="margin-bottom: 100px;">
+    <h3><a id="HRA" style="color: black" href="default.asp" target="_blank">Highest Rated Anime</a></h3>
+    <p >Animes with highest user rating.</p>
+    <hr>
+    <div class="row" id="rowanime">
+        <div class="card-deck">
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img class="card-img" src="wolf.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Wolf Children</h4>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img class="card-img" src="name.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Your Name</h4>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img class="card-img" src="blue.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Perfect Blue</h4>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img class="card-img" src="garden.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">The Garden of Words</h4>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card">
+                    <img class="card-img" src="totoro.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">My Neighbor Totoro</h4>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron" style="margin-bottom: 100px;">
+    <div class="container">
+
+        <h3><a style="color: black" href="default.asp" target="_blank">Highest Rated Anime Series</a></h3>
+        <p>Anime Series with highest user rating.</p>
+        <hr>
+        <div class="row">
+            <div class="card-deck">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card jcard">
+                        <img class="card-img" src="one.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">One Punchman</h4>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card jcard">
+                        <img class="card-img" src="dragon.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Dragon Ball Super</h4>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card jcard">
+                        <img class="card-img" src="naruto.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Naruto Shippuden</h4>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card jcard">
+                        <img class="card-img" src="wise.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Wise Man's Grandchild</h4>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card jcard">
+                        <img class="card-img" src="fairy.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Fairy tail</h4>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-bottom: 100px;">
+    <h4><a style="color: black" href="default.asp" target="_blank">Coming soon</a></h4>
+    <p>Movies that will soon release in theaters.</p>
+    <hr>
+</div>
+<div class="jumbotron" style="margin:0px !important;">
+    <div class="container-fluid" style="padding: 2px 90px">
+        <div class="row">
+            <div class="column" style="width: 480px">
+                <h5>About</h5>
+                <p>Watch Your Favorite Anime Online for Free</p>
+            </div>
+            <div class=" col-sm-1 col-md-3" >
+                <h5>Explore</h5>
+                <div class="list-group">
+                    <p><a style="color: black" href="default.asp" target="_blank">Top Movies</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Top Shows</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Coming Soon</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Now Playing</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">People</a></p>
+                </div>
+            </div>
+            <div class=" col-sm-4 col-md-3">
+                <h5>genres</h5>
+                <div class="list-group">
+                    <p><a style="color: black" href="default.asp" target="_blank">Action</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Comedy</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Drama</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Crime</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Adventure</a></p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-3" >
+                <h5>Pages</h5>
+                <div class="list-group">
+                    <p><a style="color: black" href="default.asp" target="_blank">Contact</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Privacity policy</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">Terms of Use</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">About Us</a></p>
+                    <p><a style="color: black" href="default.asp" target="_blank">DMCA</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div display="block"
+     style="background: tomato;Max-Width: 100%; border: 1px; height:50px; padding-top: 12px; padding-right: 10px;">
+    <p style="text-align: right;color: white; font-size: 13px">Copyright © 2019 Anime Karma</p>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="padding: 70px 50px 70px 50px">
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="/action_page.php" method="">
+                    <div class="form-group">
+
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                        <label class="custom-control-label" for="customCheck">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Login</button>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("HRA").addEventListener("mouseover", ocultar);
+
+    function ocultar() {
+
+        if(document.getElementById("rowanime").style.display==="none"){
+            document.getElementById("rowanime").style.display="initial";
+        }else{
+            document.getElementById("rowanime").style.display="none";
+        }
+    }
+
+      document.getElementById("busqueda").addEventListener("change", multiplicar);
+      function multiplicar(){
+        var resultado = document.getElementById("busqueda").value*5;
+        alert(resultado);
+      }
+</script>
+</body>
+</html>
